@@ -1,0 +1,17 @@
+<script>
+var record= new Promise((res,rej)=>{
+    console.log(typeof res,typeof rej);
+    rej("Task is incomplete")
+}
+)
+console.log(record);
+
+record.then((value)=>{ //resolives value
+console.log(value);
+}).catch((error)=>{
+    console.log(error);
+
+}).finally(()=>{
+    console.log("proceed for next task")
+})
+</script>
